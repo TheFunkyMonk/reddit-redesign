@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Reddit Redesign",
+  "version": "0.1.0",
+  "description": "Light re-skin of reddit.com",
+
+  "content_scripts": [{
+    "css": ["dist/styles.css"],
+    "js": ["dist/scripts.js"],
+    "matches": [
+			"https://reddit.com/*",
+			"https://old.reddit.com/*"
+		]
+  }]
+
+}

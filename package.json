@@ -1,0 +1,18 @@
+{
+  "name": "reddit-redesign",
+  "version": "1.0.0",
+  "description": "Light redesign for reddit",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "R.J. LaCount",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-css-vip": "^1.0.2"
+  }
+}
