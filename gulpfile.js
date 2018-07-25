@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const sass = require('gulp-sass');
 const vip = require('gulp-css-vip');
 
@@ -10,7 +11,10 @@ gulp.task('sass', () => (
 ));
 
 gulp.task('js', () => (
-  gulp.src('src/*.js')
+	gulp.src('src/*.js')
+		.pipe(babel({
+			presets: ['env']
+		}))
 		.pipe(gulp.dest('dist'))
 ));
 
