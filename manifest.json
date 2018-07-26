@@ -21,8 +21,8 @@
 	],
 
 	"web_accessible_resources": [
-    "img/*",
-		"dist/*"
+		"img/*",
+		"fonts/*"
 	],
 
 	"background": {

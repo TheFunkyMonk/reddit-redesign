@@ -1,16 +1,50 @@
+$white: #FFFFFF;
+$black: #333333;
+$link-blue: #336699;
+$link-blue-visited: #0E3E6C;
+
 body {
 	opacity: 0;
-	transition: opacity 150ms ease;
+	transition: opacity 300ms ease;
 
 	&.loaded {
 		opacity: 1;
+	}
+
+	&.redesign {
+		font: normal x-small 'Open Sans', sans-serif;
 	}
 }
 
 .redesign {
 
+	::selection {
+		background: $black;
+		color: $white;
+	}
+
+	#header-img {
+
+		&.default-header {
+			background: url('chrome-extension://__MSG_@@extension_id__/img/icon-on.png') 0 0 no-repeat;
+			background-size: 40px;
+			width: 40px;
+			height: 40px;
+		}
+	}
+
 	.thing {
 		margin: 2em 0;
+
+		.title {
+			font-family: 'Domine', sans-serif;
+			font-size: 20px;
+			color: $link-blue;
+
+			&:visited {
+				color: $link-blue-visited;
+			}
+		}
 	}
 
 	.thumbnail {
