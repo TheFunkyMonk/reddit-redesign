@@ -1,9 +1,7 @@
-chrome.runtime.sendMessage("active");
+let state = { active: true };
+chrome.runtime.sendMessage(state);
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-	alert('content script got ' + message);
-	// if (message === 'active') {
-	// 	on = true;
-	// 	chrome.browserAction.setIcon({path: 'img/icon-on.png'});
-	// }
+	state = message;
+	console.log('state toggled ', state);
 });

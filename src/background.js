@@ -1,26 +1,34 @@
-let on = false;
+let state = { active: false };
 
 chrome.runtime.onMessage.addListener(function(message, sender, sendResponse) {
-	if (message === 'active') {
-		on = true;
-		chrome.browserAction.setIcon({path: 'img/icon-on.png'});
-	}
+	state = message;
+	setDefaultIcon(state.active);
 });
 
-const updateIcon = () => {
-	if (on) {
-		chrome.browserAction.setIcon({path: 'img/icon-off.png'});
-		on = false;
+const setDefaultIcon = (active) => {
+	if (active) {
+		chrome.browserAction.setIcon({path: 'img/icon-on.png'});
+	}
+}
 
-		chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-			chrome.tabs.sendMessage(tabs[0].id, "inactive", function(response) {
-				console.log(response.farewell);
-			});
-		});
+const toggleIcon = () => {
+	if (state.active) {
+		chrome.browserAction.setIcon({path: 'img/icon-off.png'});
+		state.active = false;
+		sendMessage(state);
 	} else {
 		chrome.browserAction.setIcon({path: 'img/icon-on.png'});
-		on = true;
+		state.active = true;
+		sendMessage(state);
 	}
 };
 
-chrome.browserAction.onClicked.addListener(updateIcon);
+const sendMessage = (message) => {
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+		chrome.tabs.sendMessage(tabs[0].id, message, function(response) {
+			console.log(response.farewell);
+		});
+	});
+}
+
+chrome.browserAction.onClicked.addListener(toggleIcon);
