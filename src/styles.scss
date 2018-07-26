@@ -1,17 +1,29 @@
-.thing {
-	margin: 2em 0;
+body {
+	opacity: 0;
+	transition: opacity 150ms ease;
+
+	&.loaded {
+		opacity: 1;
+	}
 }
 
-.thumbnail {
-	border-radius: 50%;
-	width: 60px;
-	height: 60px;
+.redesign {
 
-	img {
-		height: 100%;
-		left: 50%;
-		position: absolute;
-		transform: translatex(-50%);
-		width: auto;
+	.thing {
+		margin: 2em 0;
+	}
+
+	.thumbnail {
+		border-radius: 50%;
+		width: 60px;
+		height: 60px;
+
+		img {
+			height: 100%;
+			left: 50%;
+			position: absolute;
+			transform: translatex(-50%);
+			width: auto;
+		}
 	}
 }
