@@ -1,0 +1,42 @@
+::selection {
+	background: $black;
+	color: $white;
+}
+
+#header-img {
+
+	&.default-header {
+		background: url('chrome-extension://__MSG_@@extension_id__/img/icon-on.png') 0 0 no-repeat;
+		background-size: 40px;
+		width: 40px;
+		height: 40px;
+	}
+}
+
+.thing {
+	margin: 2em 0;
+
+	.title {
+		font-family: 'Domine', sans-serif;
+		font-size: 20px;
+		color: $link-blue;
+
+		&:visited {
+			color: $link-blue-visited;
+		}
+	}
+}
+
+.thumbnail {
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+
+	img {
+		height: 100%;
+		left: 50%;
+		position: absolute;
+		transform: translatex(-50%);
+		width: auto;
+	}
+}

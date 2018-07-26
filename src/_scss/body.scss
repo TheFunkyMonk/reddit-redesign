@@ -1,0 +1,12 @@
+body {
+	opacity: 0;
+	transition: opacity 300ms ease;
+
+	&.loaded {
+		opacity: 1;
+	}
+
+	&.redesign {
+		font: normal x-small 'Open Sans', sans-serif;
+	}
+}

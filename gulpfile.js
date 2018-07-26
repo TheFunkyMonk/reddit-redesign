@@ -4,7 +4,7 @@ const sass = require('gulp-sass');
 const vip = require('gulp-css-vip');
 
 gulp.task('sass', () => (
-  gulp.src('src/*.scss')
+  gulp.src('src/styles.scss')
 		.pipe(sass.sync().on('error', sass.logError))
 		.pipe(vip())
     .pipe(gulp.dest('dist'))
@@ -19,7 +19,7 @@ gulp.task('js', () => (
 ));
 
 gulp.task('watch', () => {
-  gulp.watch('src/*.scss', ['sass'])
+  gulp.watch(['src/*.scss', 'src/_scss/**/*'], ['sass'])
 		.on('change', (event) => {
 			console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
 		});
