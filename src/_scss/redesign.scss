@@ -3,18 +3,40 @@
 	color: $white;
 }
 
+// Header
+
+#header {
+	background-color: $gray-light;
+	border-bottom: 1px solid $gray-dark;
+}
+
 #header-img {
 
 	&.default-header {
 		background: url('chrome-extension://__MSG_@@extension_id__/img/icon-on.png') 0 0 no-repeat;
 		background-size: 40px;
-		width: 40px;
 		height: 40px;
+		margin: 0 5px 5px 0;
+		width: 40px;
 	}
 }
 
+#header-bottom-left {
+	padding: 15px 0 0 12px;
+}
+
+#header-bottom-right,
+.tabmenu li a {
+	background-color: $white;
+}
+
+// Content
+
+.content {
+	margin-top: 20px;
+}
+
 .thing {
-	margin: 2em 0;
 
 	.title {
 		font-family: 'Domine', sans-serif;
@@ -27,10 +49,36 @@
 	}
 }
 
+.link {
+	margin: 10px 0;
+	padding: 10px 0;
+
+	&.last-clicked {
+		border: none;
+	}
+
+	.rank {
+		color: $gray-medium;
+		font-size: 12px;
+		margin-top: 24px;
+		opacity: 0.5;
+	}
+
+	.midcol {
+		margin-top: 6px;
+	}
+}
+
+.entry {
+	margin-top: 5px;
+}
+
 .thumbnail {
+	border: 1px solid $gray-med-light;
 	border-radius: 50%;
-	width: 60px;
-	height: 60px;
+	height: 62px;
+	margin-right: 15px;
+	width: 62px;
 
 	img {
 		height: 100%;
@@ -39,4 +87,22 @@
 		transform: translatex(-50%);
 		width: auto;
 	}
+
+	&.default {
+		background-position: -4px -224px;
+	}
+
+	&.self {
+		background-position: -4px -442px;
+	}
+
+	&.nsfw {
+		background-position: -4px -297px;
+	}
+}
+
+// RES
+
+.NERPageMarker {
+	background-color: $white;
 }
