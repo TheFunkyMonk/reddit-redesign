@@ -29,7 +29,7 @@ Gulp will compile the `/dist` directory and watch for changes.
 
 ## Authors
 
-* **R.J. LaCount** - [Portfolio](https://github.com/PurpleBooth)
+* **R.J. LaCount** - [Portfolio](http://rjlacount.com)
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
