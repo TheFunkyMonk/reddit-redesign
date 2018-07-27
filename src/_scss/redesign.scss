@@ -1,5 +1,5 @@
 ::selection {
-	background: $black;
+	background: $link-blue;
 	color: $white;
 }
 
@@ -50,8 +50,8 @@
 }
 
 .link {
-	margin: 10px 0;
-	padding: 10px 0;
+	margin: 10px 0 0;
+	padding: 10px 0 0;
 
 	&.last-clicked {
 		border: none;
@@ -103,6 +103,7 @@
 
 // RES
 
+#progressIndicator,
 .NERPageMarker {
 	background-color: $white;
 }
