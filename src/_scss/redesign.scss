@@ -89,15 +89,27 @@
 	}
 
 	&.default {
-		background-position: -4px -224px;
+		background-position: -4px -1093px;
+
+		@media only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+			background-position: -4px -224px;
+		}
 	}
 
 	&.self {
-		background-position: -4px -442px;
+		background-position: -4px -1261px;
+
+		@media only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+			background-position: -4px -442px;
+		}
 	}
 
 	&.nsfw {
-		background-position: -4px -297px;
+		background-position: -4px -1149px;
+
+		@media only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
+			background-position: -4px -297px;
+		}
 	}
 }
 
