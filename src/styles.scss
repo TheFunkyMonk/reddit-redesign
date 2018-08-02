@@ -3,4 +3,8 @@
 
 .redesign {
   @import '_scss/redesign';
+
+  &.res-nightmode {
+    @import '_scss/night-mode';
+  }
 }
