@@ -1,4 +1,34 @@
+a,
+a:visited {
+	color: $white;
+}
+
+.selected {
+
+	a,
+	a:visited {
+		border: 1px solid $gray-dark;
+		border-bottom: 1px solid $black;
+	}
+}
+
 #header {
 	background-color: $black;
 	border-bottom: 1px solid $gray-dark;
+}
+
+#header-bottom-right,
+.tabmenu li a {
+	background-color: $black;
+}
+
+.thing {
+
+	.title {
+		color: $white;
+
+		&:visited {
+			color: $gray-light;
+		}
+	}
 }

@@ -5,7 +5,11 @@
 
 a,
 a:visited {
-	color: $link-blue-visited;
+	color: $black;
+
+	&:hover {
+		color: $link-blue-visited;
+	}
 }
 
 .selected {
@@ -63,10 +67,18 @@ a:visited {
 	.title {
 		font-family: 'Domine', sans-serif;
 		font-size: 20px;
-		color: $link-blue;
+		color: $black;
 
 		&:visited {
-			color: $link-blue-visited;
+			color: $black;
+
+			&:hover {
+				color: $link-blue-visited;
+			}
+		}
+
+		&:hover {
+			color: $link-blue;
 		}
 	}
 }
@@ -142,7 +154,7 @@ a:visited {
 		}
 	}
 
-	.spoiler {
+	&.spoiler {
 		background-position: -4px -1205px;
 
 		@media only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) {
